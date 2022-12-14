@@ -1,13 +1,33 @@
 ul
 {
     list-style-type: none;
+
 }
 #divTodo
 {
-     padding-top: 10px;
+     padding-top: 0px;
+     margin-top: 10px;
      margin-right: 30px;
-     padding-bottom: 10px;
+     padding-bottom: 0px;
+
+}#insideDivTodo
+{
+    background: rgb(255, 255, 255);
 }
 
+#liTodoItem
+{
+    background-color: rgb(255, 255, 255);
+}
+
+body 
+{ 
+    min-height: 100%;
+}
+
+html 
+{ 
+    height: 100%;
+}
 
 

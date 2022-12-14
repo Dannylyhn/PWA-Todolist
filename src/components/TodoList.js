@@ -1,4 +1,4 @@
-import React from 'react'  
+import React, { useEffect } from 'react'  
 import Todo from './Todo'
 import {useState} from 'react'; 
 import TodoForm from './Form';
@@ -15,16 +15,22 @@ function TodoList(){
   function deleteTodo(id){
     setTodos(todos.filter(todo => todo.id!==id));
   }
+  
+  useEffect(() => {
+    document.body.style.background = "#001440";
+  });
 
   return (
     <div>
-      <h1 align="center" >Todolist</h1>
-      <label id="formLabel" >Insert todo</label>
+      <h1 style={{ color: 'white', fontWeight: 'bold' }} id="hTitle" class="display-2" align="center" >A Simple Todolist</h1>
+      <h1 style={{ color: 'white' }} id="hUnderTitle" class="display-4" >Insert todo</h1>
       <TodoForm addTodo={addTodo}/>
-     <ul>
+      <ul>
+        <li>
         {todos.map(todo => (
           <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo}/>
         ))}
+        </li>
      </ul>
     </div>
     )
